@@ -1,0 +1,21 @@
+// where is the led connected?
+// port: A
+// pin:  5
+
+#define PERIPH_BASE 			(0x40000000UL) // base address for all peripheral registers
+
+#define AHB1_PERIPH_OFFSET		(0x00020000UL) // stm32 peripherals are grouped by buses
+#define AHB1_PERIPH_BASE		(PERIPH_BASE + AHB1_PERIPH_OFFSET) // AHB1 peripherals start at 0x40020000
+
+#define GPIOA_OFFSET 			(0x0000UL) // gpio lives at the start of ahb1 bus region
+#define GPIOA_BASE				(AHB1_PERIPH_BASE + GPIOA_OFFSET) // to configure port a registers, start from here
+
+#define RCC_OFFSET 				(0x3800UL) // block that controls clocks for all peripherals
+#define RCC_BASE				(AHB1_PERIPH_BASE + RCC_OFFSET) // its registers start here
+
+
+#define AHB1EN_R_OFFSET			(0x30UL) // defines the address of the rcc ahb1 peripheral clock enable registers
+#define RCC_AHB1EN_R			(RCC_BASE + AHB1EN_R_OFFSET) // to use gpioa, you must enable its clock by writing to this register
+
+#define GPIOAEN 				(1U<<0) // each bit in rcc_ahb1en_r corresponds to enabling the clock for one peripheral
+

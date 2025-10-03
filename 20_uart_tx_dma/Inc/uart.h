@@ -1,0 +1,24 @@
+/*
+ * uart.h
+ *
+ *  Created on: Sep 25, 2025
+ *      Author: garrettfalast
+ */
+
+#ifndef UART_H_
+#define UART_H_
+
+#include "stm32f4xx.h"
+#include <stdint.h>
+#include <stdio.h>
+
+#define SR_RXNE			(1U<<5)
+#define HISR_TCIF6		(1U<<21)
+#define HIFCR_CTCIF6	(1U<<21)
+
+void uart2_rxtx_init(void);
+char uart2_read(void);
+void uart2_rx_interrupt_init(void);
+void dma1_stream6_init(uint32_t source, uint32_t destination, uint32_t length);
+
+#endif /* UART_H_ */

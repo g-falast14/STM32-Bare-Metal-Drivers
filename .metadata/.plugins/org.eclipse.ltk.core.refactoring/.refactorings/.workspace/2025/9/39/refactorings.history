@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;2_gpio_output2&apos; to &apos;3_gpio_bsrr&apos;" description="Rename resource &apos;2_gpio_output2&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/2_gpio_output2" name="3_gpio_bsrr" stamp="1758769160704" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;9_adc&apos; to &apos;9_adc_single_conversion&apos;" description="Rename resource &apos;9_adc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/9_adc" name="9_adc_single_conversion" stamp="1758855852828" updateReferences="true"/>
+</session>

@@ -1,0 +1,28 @@
+#include "stm32f4xx.h"
+#include <stdint.h>
+#include <stdio.h>
+#include "uart.h"
+#include "adc.h"
+#include "systick.h"
+#include "tim.h"
+#include "exti.h"
+
+
+
+int main(void) {
+
+	pc13_exti_init();
+
+	while(1) {
+
+
+	}
+
+}
+
+
+
+
+
+
+

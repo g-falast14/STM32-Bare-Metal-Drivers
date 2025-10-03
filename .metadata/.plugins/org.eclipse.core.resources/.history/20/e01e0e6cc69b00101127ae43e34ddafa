@@ -1,0 +1,30 @@
+/*
+ * i2c.c
+ *
+ *  Created on: Sep 27, 2025
+ *      Author: garrettfalast
+ */
+
+#include "stm32f4xx.h"
+
+#define GPIOBEN 	(1U<<1)
+#define I2C1EN		(1U<<21)
+
+// pinout
+// PB8: SCL
+// PB9: SDA
+void I2C1_init(void) {
+
+	// enable clock access to GPIOB
+	RCC->AHB1ENR |= GPIOBEN;
+
+	// set PB8 and PB9 mode to alternate function
+	GPIOB->MODER &= ~(1U<<16);
+	GPIOB->MODER &= ~(1U<<17);
+
+
+	// Set PB8 and PB9 output type to open drain
+
+	//
+
+}

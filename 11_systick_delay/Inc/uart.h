@@ -1,0 +1,24 @@
+/*
+ * uart.h
+ *
+ *  Created on: Sep 25, 2025
+ *      Author: garrettfalast
+ */
+
+#ifndef UART_H_
+#define UART_H_
+
+#include "stm32f4xx.h"
+#include <stdint.h>
+#include <stdio.h>
+
+void uart2_rxtx_init(void);
+void uart2_tx_init(void);
+int __io_putchar(int ch);
+char uart2_read(void);
+void uart2_write(int ch);
+void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t BaudRate);
+uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t BaudRate);
+
+
+#endif /* UART_H_ */

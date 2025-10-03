@@ -1,0 +1,25 @@
+/*
+ * exti.c
+ *
+ *  Created on: Sep 26, 2025
+ *      Author: garrettfalast
+ */
+
+#include "exti.h"
+
+void pc13_exti_init(void) {
+	// disable global interrupt
+
+	// enable clock access for GPIOC
+
+	// enable clock access to SYSCFG
+
+	// select PORTC for EXTI13
+
+	// unmask EXTI13
+
+	// select falling edge trigger
+
+	// enable EXTI line in NVIC
+}
+

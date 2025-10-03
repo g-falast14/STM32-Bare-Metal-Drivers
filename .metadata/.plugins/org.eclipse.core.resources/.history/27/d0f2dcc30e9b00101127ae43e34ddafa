@@ -1,0 +1,40 @@
+#include "stm32f4xx.h"
+#include <stdint.h>
+#include <stdio.h>
+#include "uart.h"
+#include "adc.h"
+#include "systick.h"
+#include "tim.h"
+#include "exti.h"
+
+
+
+int main(void) {
+
+	pc13_exti_init();
+
+	while(1) {
+
+
+	}
+
+}
+
+void EXTI15_1_IRQHandler() {
+
+	// check if interrupt has occured
+	if (EXTI->PR & LINE13) {
+		// clear PR flag
+
+		// execute code when interrupt occurs
+
+
+	}
+
+}
+
+
+
+
+
+

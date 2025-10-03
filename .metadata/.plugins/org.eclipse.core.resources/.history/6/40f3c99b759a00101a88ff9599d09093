@@ -1,0 +1,42 @@
+/*
+ * adc.c
+ *
+ *  Created on: Sep 25, 2025
+ *      Author: garrettfalast
+ */
+
+
+#define GPIOAEN			(1U<<0)
+#define ADC1EN			(1U<<8)
+
+// channels for adc
+#define ADC_CH1			(1U<<0)
+
+
+void pa1_adc_init(void) {
+
+	// Configure the ADC GPIO pin
+	// enable clock access to GPIOA
+	RCC->AHB1ENR |= GPIOAEN;
+
+	// set the mode of pa1 to analog mode
+	GPIOA->MODER |= (1U<<2);
+	GPIOA->MODER |= (1U<<3);
+
+	// configure the ADC module
+	// enable clock access to adc
+	RCC->APB2ENR |= ADC1EN;
+
+	// Configure ADC parameters
+	// conversion sequence start
+	ADC1->SQR3 = ADC_CH1
+
+	// conversion sequence length
+
+	// enable ADC module
+
+
+
+
+
+}
